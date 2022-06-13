@@ -47,7 +47,8 @@
   margin: auto;
   margin-top: 5vh;
   margin-bottom: 10vh;
-  background-color: #424242;
+  background-image: url('./images/hero1.jpg');
+  background-size: contain;
   color: white;
   display: flex;
   flex-direction: column;
@@ -84,7 +85,8 @@
 section {
   width: 90vw;
   margin: auto;
-  margin-top: 10vh;
+  margin-top: 20vh;
+  margin-bottom: 20vh;
 }
 section h1 {
   color: #424242;
