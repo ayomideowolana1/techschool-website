@@ -253,7 +253,8 @@ section .container1 > div p {
 }
 .container4 > div {
   display: flex;
-  background-color: #f2f2f2;
+  background-color: #f8f9fb;
+  border-radius: 10px;
   padding: 4vw 2vw;
   transform: scale(0.8, 0.8);
 }
