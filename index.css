@@ -247,13 +247,16 @@ section .container1 > div p {
 }
 .container4 {
   margin-bottom: 30px;
+  margin: auto;
 }
 .container4 > div {
   display: flex;
-  border: 1px solid #f2f2f2;
+  background-color: #f2f2f2;
   padding: 2vw;
 }
 .container4 > div .navLocal {
+  background-color: white;
+  padding-top: 20px;
   flex: 1;
 }
 .container4 > div .navLocal ul {
@@ -273,7 +276,7 @@ section .container1 > div p {
   border: 1px solid #f2f2f2;
   text-align: center;
   width: 80%;
-  margin-left: auto;
+  margin: auto;
   font-size: 14px;
 }
 .container4 > div .view {
@@ -289,9 +292,22 @@ section .container1 > div p {
   padding-top: 0px;
 }
 .container4 > div .view > div {
-  width: 19vw;
-  border: 1px solid #f2f2f2;
-  height: 20vh;
+  flex: 1;
+  min-width: 30%;
+  max-width: 19vw;
+  border: 1px solid #424242;
+  padding-top: 1vw;
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+}
+.container4 > div .view > div h3 {
+  text-align: center;
+}
+.container4 > div .view > div img {
+  width: 60%;
+  height: auto;
+  margin: auto;
 }
 .enquiries {
   border: 1px solid #f2f2f2;
