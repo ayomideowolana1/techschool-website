@@ -155,7 +155,8 @@
     margin-top: 1vh;
     padding: 3vw 4vw;
     display: inline-block;
-    width: 200px;
+    width: auto;
+    max-width: 200px;
     color: white;
     background-color: #F26821;
     text-decoration: none;
