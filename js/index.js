@@ -63,7 +63,10 @@ const courses = {
     },
     { name: "AI Product Manager", url: "./images/product-mgt/ai-pm.png" },
     { name: "Data Product Manager", url: "./images/product-mgt/data-pm.png" },
-    { name: "Monetization Strategy", url: "./images/product-mgt/monetization.png" },
+    {
+      name: "Monetization Strategy",
+      url: "./images/product-mgt/monetization.png"
+    },
     {
       name: "Activation and Retention Strategy",
       url: "./images/product-mgt/ars.png"
@@ -75,19 +78,25 @@ const courses = {
     { name: "UX Designer", url: "./images/product-mgt/ux.png" }
   ],
   business: [
-    { name: "Crystal Reports" ,url:"./images/business-apps/crystal-reports.png"},
-    { name: "Quickbooks" ,url:"./images/business-apps/quickbooks.png"},
-    { name: "Salesforce" ,url:"./images/business-apps/sap.png"},
-    { name: "SAP" ,url:"./images/business-apps/sap.png"},
-    { name: "S4 Hana" ,url:"./images/business-apps/s4hana.png"},
-    { name: "Ariba" ,url:"./images/business-apps/ariba.png"},
-    { name: "Success Factor",url:"./images/business-apps/success-factor.png" }
+    {
+      name: "Crystal Reports",
+      url: "./images/business-apps/crystal-reports.png"
+    },
+    { name: "Quickbooks", url: "./images/business-apps/quickbooks.png" },
+    { name: "Salesforce", url: "./images/business-apps/sap.png" },
+    { name: "SAP", url: "./images/business-apps/sap.png" },
+    { name: "S4 Hana", url: "./images/business-apps/s4hana.png" },
+    { name: "Ariba", url: "./images/business-apps/ariba.png" },
+    { name: "Success Factor", url: "./images/business-apps/success-factor.png" }
   ],
   leadership: [
-    { name: "Leadership and Professional Development" ,url:"./images/leadership/leader.png"},
-    { name: "Human Resource Management" ,url:"./images/leadership/hr.png"},
-    { name: "Human Resource Management" ,url:"./images/leadership/hr.png"},
-    { name: "Business Analysis",url:"./images/leadership/ba.png" }
+    {
+      name: "Leadership and Professional Development",
+      url: "./images/leadership/leader.png"
+    },
+    { name: "Human Resource Management", url: "./images/leadership/hr.png" },
+    { name: "Human Resource Management", url: "./images/leadership/hr.png" },
+    { name: "Business Analysis", url: "./images/leadership/ba.png" }
   ],
   technical: [
     { name: "Google Cloud", url: "./images/technical/google-cloud.png" },
@@ -225,6 +234,21 @@ s4NavItems.forEach(item => {
   });
 });
 
+const toggle = () => {
+  let toggleIcon = document.getElementById("toggle");
+  let dropdown = document.getElementById("dropdown");
+  toggleIcon.addEventListener("click", () => {
+    if (dropdown.style.display == "block") {
+      dropdown.style.display = "none";
+    } else {
+      dropdown.style.display = "block";
+    }
+  });
+
+  console.log(toggleIcon, dropdown);
+};
+
 const load = () => {
   populateView("microsoft");
+  toggle();
 };

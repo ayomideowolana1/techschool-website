@@ -1,5 +1,4 @@
 .navContainer {
-  position: relative;
   position: sticky;
   top: 0px;
   background-color: white;
@@ -41,8 +40,62 @@
   color: #162a57;
   cursor: pointer;
 }
-.hero-cont {
-  border: 1px solid transparent;
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
+  .navContainer.lg {
+    display: none;
+  }
+  .navContainer.sm {
+    position: sticky;
+    top: 0px;
+  }
+  .navContainer.sm .nav {
+    max-width: 100%;
+    padding: 10px;
+  }
+  .navContainer.sm .nav .links {
+    display: none;
+  }
+  .navContainer.sm .logo {
+    max-width: 25vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+  .navContainer.sm .logo img {
+    max-width: 40vw;
+    transform: scale(0.8, 0.8);
+  }
+  .navContainer.sm .toggle {
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .navContainer.sm .toggle > div {
+    padding: 3px;
+    background-color: #213e7f;
+  }
+}
+@media screen and (min-width: 1081px)  {
+  .navContainer.sm {
+    display: none;
+  }
+}
+.navContainer .dropdown {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 3px #424242;
+  display: none;
+}
+.navContainer .dropdown .links {
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  flex-direction: column;
 }
 .hero {
   height: 600px;
@@ -87,6 +140,28 @@
   text-decoration: none;
   font-family: sans-serif;
 }
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
+  .hero {
+    width: 95vw;
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+  }
+  .hero h1,
+  .hero h2 {
+    text-shadow: none;
+    text-shadow: 0px 0px 2px #4242429a;
+  }
+  .hero .cta {
+    margin-top: 1vh;
+    padding: 3vw 4vw;
+    display: inline-block;
+    width: -moz-max-content;
+    color: white;
+    background-color: #F26821;
+    text-decoration: none;
+    font-family: sans-serif;
+  }
+}
 .whitebg {
   background-color: white;
 }
@@ -98,6 +173,11 @@ section {
   margin: auto;
   margin-top: 20vh;
   margin-bottom: 20vh;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
+  section {
+    margin-bottom: 10vh;
+  }
 }
 section.blueh1 h1 {
   color: #3964AA;
@@ -142,6 +222,19 @@ section .container1 > div p {
   font-size: 14px;
   padding: 5px;
   line-height: 1.5;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
+  section {
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+  }
+  section .container1 {
+    flex-direction: column;
+    gap: 2vh;
+  }
+  section .container1 > div {
+    transform: scale(0.8, 0.8);
+  }
 }
 .section2Cont {
   border: 1px solid white;
@@ -221,7 +314,38 @@ section .container1 > div p {
   font-weight: 500;
   line-height: 1.5;
 }
-.container3 {
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
+  .container2 {
+    height: 500px;
+    flex-direction: column;
+  }
+  .container2 > div {
+    flex: 1;
+  }
+  .container2 > div.navLocal {
+    flex-direction: row;
+    gap: 0px;
+  }
+  .container2 > div.navLocal a {
+    transform: scale(0.6, 0.6);
+  }
+  .container2 > div.view {
+    width: 90vw;
+    padding: 0px;
+    display: flex;
+  }
+  .container2 > div.view .toggleItem {
+    flex: 1;
+  }
+  .container2 > div.view .toggleItem h2 {
+    text-align: center;
+  }
+  .container2 > div.view .toggleItem p {
+    padding: 10px;
+    text-align: center;
+  }
+}
+.section3 .container3 {
   padding: 0px;
   background-color: #f3f3f3;
   margin-left: -5vw;
@@ -229,42 +353,66 @@ section .container1 > div p {
   height: 25vh;
   padding-top: 2vh;
 }
-.container3 h1 {
+.section3 .container3 h1 {
   font-family: sans-serif;
   font-weight: 500;
   font-size: 3vh;
 }
-.container3 div {
+.section3 .container3 div {
   display: flex;
   gap: 2vw;
   justify-content: space-around;
   max-width: 80%;
   margin: auto;
 }
-.container3 div img {
+.section3 .container3 div img {
   width: 65px;
   height: 25px;
 }
-.container4 {
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
+  .section3 .container3 {
+    margin-top: 10vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .section3 .container3 div {
+    flex-wrap: wrap;
+  }
+  .section3 .container3 div img {
+    padding: 10px;
+    width: 25vw;
+    height: auto;
+    transform: scale(0.6, 0.6);
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
+  .section3 {
+    width: 100vw;
+  }
+}
+section .container4 {
   margin: auto;
 }
-.container4 h1 {
+section .container4 h1 {
   margin-bottom: 0vh;
 }
-.container4 > div {
+section .container4 > div {
   display: flex;
   background-color: #f8f9fb;
   border-radius: 10px;
   padding: 4vw 2vw;
   transform: scale(0.8, 0.8);
 }
-.container4 > div .navLocal {
+section .container4 > div .navLocal {
   background-color: white;
   padding-top: 20px;
   flex: 1;
   border-radius: 10px;
 }
-.container4 > div .navLocal ul {
+section .container4 > div .navLocal ul {
   height: 100%;
   list-style: none;
   margin: 0px;
@@ -276,7 +424,7 @@ section .container1 > div p {
   max-height: 60vh;
   font-family: sans-serif;
 }
-.container4 > div .navLocal ul li {
+section .container4 > div .navLocal ul li {
   padding: 20px;
   border: 1px solid #eaeff8;
   text-align: center;
@@ -286,13 +434,13 @@ section .container1 > div p {
   font-weight: bold;
   color: #27251f;
 }
-.container4 > div .navLocal ul li:hover {
+section .container4 > div .navLocal ul li:hover {
   border: none;
   background-color: #F26821;
   color: white;
   border: 1px solid transparent;
 }
-.container4 > div .view {
+section .container4 > div .view {
   flex: 3;
   display: flex;
   flex-direction: row;
@@ -304,7 +452,7 @@ section .container1 > div p {
   padding: 3vw;
   padding-top: 10px;
 }
-.container4 > div .view > div {
+section .container4 > div .view > div {
   transform: scale(0.8, 0.8);
   flex: 1;
   min-width: 30%;
@@ -316,18 +464,50 @@ section .container1 > div p {
   gap: 3vh;
   transition: 0.3s ease;
 }
-.container4 > div .view > div:hover {
+section .container4 > div .view > div:hover {
   box-shadow: 0px 0px 7px #424242;
   transform: scale(0.9, 0.9);
 }
-.container4 > div .view > div h3 {
+section .container4 > div .view > div h3 {
   text-align: center;
   color: #27251f;
 }
-.container4 > div .view > div img {
+section .container4 > div .view > div img {
   width: 60%;
   height: auto;
   margin: auto;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
+  section .container4 > div {
+    margin-top: 5vh;
+    transform: scale(1, 1);
+    flex-direction: column;
+    padding: 5px;
+    padding-top: 3vh;
+  }
+  section .container4 > div .navLocal {
+    border-radius: 0px;
+    padding: 3px;
+    box-shadow: 0px 0px 2px #424242;
+  }
+  section .container4 > div .navLocal ul {
+    display: flex;
+    flex-direction: row;
+    overflow: scroll;
+    margin: 0px;
+    padding: 0px;
+  }
+  section .container4 > div .navLocal ul li {
+    transform: scale(0.8, 0.8);
+  }
+  section .container4 > div .view > div {
+    margin: auto;
+    flex: none;
+    max-width: none;
+  }
+  section .container4 > div .view > div h3 {
+    max-width: 250px;
+  }
 }
 .enqCont {
   background-color: #213e7f;
@@ -381,6 +561,22 @@ section .container1 > div p {
   transition: 0.3s ease;
   background-color: #F26821;
 }
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
+  .enqCont .enquiries {
+    width: auto;
+  }
+  .enqCont .enquiries form input {
+    width: 70%;
+    transform: scale(0.8, 0.8);
+  }
+  .enqCont .enquiries form input:focus {
+    outline: none;
+    transform: scale(1, 1);
+  }
+  .enqCont .enquiries form button {
+    width: 50vw;
+  }
+}
 footer {
   height: 50vh;
   padding-top: 5vh;
@@ -410,6 +606,17 @@ footer ul li div {
   font-size: 14px;
   font-weight: 100;
 }
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
+  footer {
+    height: auto;
+  }
+  footer ul {
+    flex-direction: column;
+  }
+  footer ul li {
+    margin-bottom: 2vh;
+  }
+}
 .copyright {
   background-color: #141414;
   color: white;
@@ -429,6 +636,13 @@ footer ul li div {
 .copyright .socials a {
   color: white;
   text-decoration: none;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
+  .copyright {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
 }
 html {
   scroll-behavior: smooth;
