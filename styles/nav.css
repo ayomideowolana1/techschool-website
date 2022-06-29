@@ -1,0 +1,195 @@
+@font-face {
+  font-family: Roboto;
+  src: url('../fonts/Roboto/Roboto-Regular.ttf');
+}
+@font-face {
+  font-family: Roboto-condensed;
+  src: url('../fonts/Roboto-Condensed/RobotoCondensed-Regular.ttf');
+}
+@font-face {
+  font-family: Source-sans;
+  src: url('../fonts/Source-sans-pro/SourceSansPro-Regular.ttf');
+}
+@font-face {
+  font-family: Playfair-disaplay;
+  src: url('../fonts/Playfair-display/PlayfairDisplay-VariableFont_wght.ttf');
+}
+@font-face {
+  font-family: Montserrat;
+  src: url('../fonts/Montserrat/Montserrat-VariableFont_wght.ttf');
+}
+@font-face {
+  font-family: PT-sans;
+  src: url('../fonts/PT-sans/PTSans-Regular.ttf');
+}
+.navContainer {
+  position: sticky;
+  top: 0px;
+  background-color: white;
+  border-bottom: 1px solid #e8edf6;
+  z-index: 2;
+  color: #162a57;
+  font-size: 14px;
+  font-family: 'PT-sans';
+}
+.navContainer .nav {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  padding: 1.5vh;
+  position: relative;
+}
+@media screen and (min-width: 1081px)  {
+  .navContainer .nav {
+    margin-left: 5.6vw;
+    margin-right: 5.6vw;
+  }
+}
+.navContainer .logo {
+  display: inline-block;
+  flex: 1;
+}
+.navContainer .logo img {
+  max-width: 6vw;
+}
+.navContainer .links {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+}
+.navContainer .links span {
+  padding: 10px;
+}
+.navContainer .links a {
+  padding: 10px;
+  color: #213e7f;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.navContainer .links a .arrow {
+  font-size: 16px;
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: 0.5s ease;
+  font-weight: bold;
+}
+.navContainer .links a:hover {
+  cursor: pointer;
+}
+.navContainer .links a:hover .arrow {
+  opacity: 1;
+  transform: translateX(0px);
+}
+.navContainer .links svg {
+  width: 10px;
+  height: 10px;
+}
+.navContainer .contact {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.navContainer .contact > span {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #213e7f;
+}
+.navContainer .contact > span > span {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  display: inline-block;
+}
+.navContainer .contact > span > span .arrow {
+  font-size: 16px;
+  transform: translateX(-10px);
+  transition: 0.5s ease;
+  display: inline-block;
+  opacity: 0;
+  font-weight: bold;
+}
+.navContainer .contact > span > span:hover {
+  cursor: pointer;
+}
+.navContainer .contact > span > span:hover .arrow {
+  opacity: 1;
+  transform: translateX(3px);
+}
+.navContainer .contact .line {
+  border-left: 1px solid white;
+  margin-left: 7px;
+  margin-right: 7px;
+  height: 15px;
+}
+.navContainer .contact svg {
+  width: 10px ;
+  height: 10px;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
+  .navContainer.lg {
+    display: none;
+  }
+  .navContainer.sm {
+    position: sticky;
+    top: 0px;
+  }
+  .navContainer.sm .nav {
+    max-width: 100%;
+    padding: 10px;
+  }
+  .navContainer.sm .nav .links {
+    display: none;
+  }
+  .navContainer.sm .logo {
+    max-width: 25vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+  .navContainer.sm .logo img {
+    max-width: 40vw;
+    transform: scale(0.8, 0.8);
+  }
+  .navContainer.sm .toggle {
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .navContainer.sm .toggle > div {
+    padding: 3px;
+    background-color: #213e7f;
+  }
+}
+@media screen and (min-width: 1081px)  {
+  .navContainer.sm {
+    display: none;
+  }
+}
+.navContainer .dropdown {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 3px #424242;
+  display: none;
+}
+.navContainer .dropdown .links {
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  flex-direction: column;
+}

@@ -1,0 +1,110 @@
+@font-face {
+  font-family: Roboto;
+  src: url('../fonts/Roboto/Roboto-Regular.ttf');
+}
+@font-face {
+  font-family: Roboto-condensed;
+  src: url('../fonts/Roboto-Condensed/RobotoCondensed-Regular.ttf');
+}
+@font-face {
+  font-family: Source-sans;
+  src: url('../fonts/Source-sans-pro/SourceSansPro-Regular.ttf');
+}
+@font-face {
+  font-family: Playfair-disaplay;
+  src: url('../fonts/Playfair-display/PlayfairDisplay-VariableFont_wght.ttf');
+}
+@font-face {
+  font-family: Montserrat;
+  src: url('../fonts/Montserrat/Montserrat-VariableFont_wght.ttf');
+}
+@font-face {
+  font-family: PT-sans;
+  src: url('../fonts/PT-sans/PTSans-Regular.ttf');
+}
+.section2Cont {
+  background-image: url('images/hero2.jpg');
+  background: linear-gradient(180deg, #3964AA 0%, #1E355B 100%);
+  padding-top: 5vh;
+  padding-bottom: 2vh;
+  margin-bottom: 15vh;
+}
+.section2Cont h1 {
+  text-align: center;
+  margin-bottom: 5vh;
+  font-size: 35px;
+  color: white;
+  font-family: 'Montserrat';
+}
+.section2Cont .container {
+  padding-bottom: 5vh;
+  display: flex;
+  justify-content: center;
+  gap: 2.5vw;
+  padding-left: 5.96vw;
+  padding-right: 5.96vw;
+  margin: auto;
+}
+.section2Cont .container h3 {
+  font-family: 'Montserrat';
+  min-height: 30px;
+  margin: 10px;
+  margin-bottom: 5px;
+}
+.section2Cont .container p {
+  font-family: 'PT-sans';
+  margin: 0px;
+  margin: 10px;
+  margin-top: 0px;
+  line-height: 1.5;
+}
+.section2Cont .container > div {
+  flex: 1;
+  border-radius: 15px;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 0px 0px 3px #424242;
+}
+.section2Cont .container > div:hover .img {
+  filter: grayscale(0%);
+}
+.section2Cont .container > div .img {
+  border-radius: 15px;
+  height: 200px;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #f2f2f2f2;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  filter: grayscale(100%);
+  transition: 0.5s ease;
+}
+.section2Cont .container > div .img.individual {
+  background-image: url('../images/stock/stock-individual.png');
+}
+.section2Cont .container > div .img.business {
+  background-image: url('../images/stock/stock-business.png');
+}
+.section2Cont .container > div .img.institution {
+  background-image: url('../images/stock/stock-insitution.png');
+}
+.section2Cont .container > div .img h4 {
+  margin-top: auto;
+  color: white;
+  margin: 0px;
+  padding-bottom: 5px;
+  font-family: 'Montserrat';
+}
+.section2Cont .container > div .learn-more {
+  opacity: 0;
+  transition: 0.5s ease;
+}
+.section2Cont .container > div:hover .learn-more {
+  opacity: 1;
+  color: #3964AA;
+  text-decoration: none;
+}
+.section2Cont .container > div:hover .learn-more:hover {
+  text-decoration: underline;
+}

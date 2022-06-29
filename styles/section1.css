@@ -1,0 +1,94 @@
+@font-face {
+  font-family: Roboto;
+  src: url('../fonts/Roboto/Roboto-Regular.ttf');
+}
+@font-face {
+  font-family: Roboto-condensed;
+  src: url('../fonts/Roboto-Condensed/RobotoCondensed-Regular.ttf');
+}
+@font-face {
+  font-family: Source-sans;
+  src: url('../fonts/Source-sans-pro/SourceSansPro-Regular.ttf');
+}
+@font-face {
+  font-family: Playfair-disaplay;
+  src: url('../fonts/Playfair-display/PlayfairDisplay-VariableFont_wght.ttf');
+}
+@font-face {
+  font-family: Montserrat;
+  src: url('../fonts/Montserrat/Montserrat-VariableFont_wght.ttf');
+}
+@font-face {
+  font-family: PT-sans;
+  src: url('../fonts/PT-sans/PTSans-Regular.ttf');
+}
+.section1 {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
+  .section1 {
+    margin-bottom: 10vh;
+  }
+}
+.section1.blueh1 h1 {
+  color: #3964aa;
+}
+.section1 h1 {
+  text-align: center;
+  font-size: 35px;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  margin-bottom: 5vh;
+}
+.section1 .container1 {
+  width: 80vw;
+  box-sizing: border-box;
+  margin: auto;
+  display: flex;
+  gap: 4vw;
+  justify-content: center;
+}
+.section1 .container1 > div {
+  flex: 1;
+  border-radius: 0.5vw;
+  box-shadow: 0px 0px 5px lightgray;
+  background-color: #f8f9fb;
+  padding: 5px;
+}
+.section1 .container1 > div .image {
+  height: 20vh;
+  margin: 10px;
+  margin-bottom: 2.5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section1 .container1 > div h2 {
+  text-align: center;
+  font-size: 20px;
+  color: #27251f;
+  font-family: 'Montserrat';
+  font-weight: 500;
+}
+.section1 .container1 > div p {
+  text-align: center;
+  color: #524d41;
+  font-family: 'PT-sans';
+  font-size: 16px;
+  padding: 5px;
+  line-height: 1.5;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
+  .section1 {
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+  }
+  .section1 .container1 {
+    flex-direction: column;
+    gap: 2vh;
+  }
+  .section1 .container1 > div {
+    transform: scale(0.8, 0.8);
+  }
+}

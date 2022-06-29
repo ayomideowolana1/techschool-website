@@ -1,3 +1,5 @@
+console.log("iiii");
+
 const courses = {
   microsoft: [
     { name: "Office 365", url: "./images/microsoft/office-365.png" },
@@ -171,6 +173,7 @@ const setViewObject = i => {
 
 const handleClickS4 = e => {
   let id = e.target.id;
+
   switch (id) {
     case "microsoft":
       setViewObject(microsoft);
@@ -214,6 +217,7 @@ const populateView = i => {
   view.innerHTML = "";
   items.forEach(item => {
     let cont = document.createElement("div");
+    cont.classList.add("viewItem");
     let image = document.createElement("img");
     let title = document.createElement("h3");
     image.src = item.url;
@@ -229,6 +233,10 @@ let s4NavItems = Array.from(document.querySelectorAll("#s4nav li"));
 
 s4NavItems.forEach(item => {
   item.addEventListener("click", e => {
+    s4NavItems.forEach(item => {
+      item.classList.remove("current");
+    });
+    e.target.classList.add("current");
     setViewObject(e.target.id);
     populateView(viewObject);
   });
@@ -248,7 +256,38 @@ const toggle = () => {
   console.log(toggleIcon, dropdown);
 };
 
+const animateHero = () => {
+  let h1 = document.querySelector(".hero h1");
+  let p = document.querySelector(".hero p");
+  let button = document.querySelector(".hero a");
+
+  const makeVisible = elem => {
+    elem.style.opacity = "1";
+  };
+  const setTransition = (elem, animClass) => {
+    elem.classList.add("animate__animated");
+    elem.classList.add(animClass);
+    console.log(elem.classList);
+
+  };
+
+  setTimeout(() => {
+    setTransition(h1,"animate__fadeInUp");
+    setTransition(h1, "animate__fast");
+    makeVisible(h1);
+  }, 800);
+  setTimeout(() => {
+    setTransition(p,"animate__fadeInUp");
+    setTransition(p, "animate__fast");
+    setTransition(button,"animate__fadeInUp");
+    setTransition(button, "animate__fast");
+    makeVisible(p);
+  }, 1000);
+  
+};
+
 const load = () => {
+  animateHero();
   populateView("microsoft");
   toggle();
 };

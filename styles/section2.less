@@ -1,0 +1,107 @@
+@import "colors.less";
+@import "mediaQueries.less";
+@import "fonts.less";
+
+.section2Cont {
+  background-image: url('./images/hero2.jpg');
+  // background-color: lighten(#eef0f5, 3%);
+  // background-color: @dark-blue;
+  background: linear-gradient(180deg, #3964AA 0%, #1E355B 100%);
+  padding-top: 5vh;
+  padding-bottom: 2vh;
+  margin-bottom: 15vh;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 5vh;
+    font-size: 35px;
+    color: white;
+    .montserrat();
+  }
+
+  .container {
+    padding-bottom: 5vh;
+    display: flex;
+    justify-content: center;
+    gap: 2.5vw;
+    // width: 90vw;
+    padding-left: 5.96vw;
+    padding-right: 5.96vw;
+    margin: auto;
+    h3 {
+      .montserrat();
+      min-height: 30px;
+      margin: 10px;
+      margin-bottom: 5px
+    }
+    p {
+      .pt-sans();
+      margin: 0px;
+      margin: 10px;
+      margin-top: 0px;
+      line-height: 1.5;
+    }
+    & > div {
+      // border: 1px solid;
+      flex: 1;
+      border-radius: 15px;
+      padding: 10px;
+      background-color: white;
+      box-shadow: 0px 0px 3px #424242;
+      &:hover{
+          .img{
+            filter: grayscale(0%);
+          }
+          
+        }
+      .img {
+        border-radius: 15px;
+        height: 200px;
+        // width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        background-color: #f2f2f2f2;
+        background-size: cover;
+        display: flex;
+        align-items: flex-end;
+        filter: grayscale(100%);
+        transition: 0.5s ease;
+        
+        &.individual{
+          background-image: url('../images/stock/stock-individual.png');
+        }
+        &.business{
+          background-image: url('../images/stock/stock-business.png');
+          
+        }
+        &.institution{
+          background-image: url('../images/stock/stock-insitution.png');
+
+        }
+        h4 {
+          margin-top: auto;
+          color: white;
+          margin: 0px;
+          padding-bottom: 5px;
+          .montserrat();
+        }
+      }
+      .learn-more{
+        opacity: 0;
+        transition: 0.5s ease;
+      }
+      &:hover{
+        .learn-more{
+          opacity: 1;
+          color: #3964AA;text-decoration: none;
+          &:hover{
+            text-decoration: underline;
+          }
+
+        }
+
+      }
+    }
+  }
+}
+

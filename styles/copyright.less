@@ -1,0 +1,31 @@
+@import "colors.less";
+@import "mediaQueries.less";
+
+
+.copyright {
+    background-color: #141414;
+    color: white;
+    padding: 10px;
+    padding-left: 10vw;
+    padding-right: 10vw;
+
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    font-family: sans-serif;
+    font-size: 14px;
+
+    .socials {
+      display: flex;
+      gap: 1vw;
+      a{
+        color: white;
+        text-decoration: none;
+      }
+    }
+    @media @mobile_portrait {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+    }
+  }

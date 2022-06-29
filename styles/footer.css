@@ -1,0 +1,40 @@
+footer {
+  height: 50vh;
+  padding-top: 5vh;
+  padding-bottom: 10vh;
+  background-color: #162a57;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer h5 {
+  font-family: sans-serif;
+}
+footer ul {
+  width: 80%;
+  font-family: sans-serif;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-around;
+  color: white;
+}
+footer ul li div {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 14px;
+  font-weight: 100;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
+  footer {
+    height: auto;
+  }
+  footer ul {
+    flex-direction: column;
+  }
+  footer ul li {
+    margin-bottom: 2vh;
+  }
+}

@@ -1,0 +1,220 @@
+@font-face {
+  font-family: Roboto;
+  src: url('../fonts/Roboto/Roboto-Regular.ttf');
+}
+@font-face {
+  font-family: Roboto-condensed;
+  src: url('../fonts/Roboto-Condensed/RobotoCondensed-Regular.ttf');
+}
+@font-face {
+  font-family: Source-sans;
+  src: url('../fonts/Source-sans-pro/SourceSansPro-Regular.ttf');
+}
+@font-face {
+  font-family: Playfair-disaplay;
+  src: url('../fonts/Playfair-display/PlayfairDisplay-VariableFont_wght.ttf');
+}
+@font-face {
+  font-family: Montserrat;
+  src: url('../fonts/Montserrat/Montserrat-VariableFont_wght.ttf');
+}
+@font-face {
+  font-family: PT-sans;
+  src: url('../fonts/PT-sans/PTSans-Regular.ttf');
+}
+.enqCont {
+  background: linear-gradient(118.68deg, rgba(242, 104, 33, 0.75) 13.25%, rgba(25, 48, 100, 0.75) 82.01%);
+  padding-top: 5vh;
+  padding-bottom: 8vh;
+}
+.enqCont .enquiries {
+  transform: scale(0.9, 0.9);
+}
+.enqCont .enquiries h1,
+.enqCont .enquiries h2 {
+  color: black;
+  margin-bottom: 0px;
+  text-align: center;
+  font-family: 'Montserrat';
+}
+.enqCont .enquiries p {
+  font-family: 'Montserrat';
+  color: black;
+  text-align: center;
+}
+.enqCont .enquiries > div {
+  border-radius: 15px;
+  background-color: white;
+  display: flex;
+  max-width: 80%;
+  margin: auto;
+  margin-top: 5vh;
+  background: linear-gradient(90deg, #f2f2f2 0%, #ffffff 100%);
+  box-shadow: 0px 0px 100px 50px rgba(0, 0, 0, 0.25);
+}
+.enqCont .enquiries > div .contact {
+  flex: 1;
+  padding: 30px;
+  background: linear-gradient(160.48deg, #0e1937 6.99%, #1c366f 109.23%);
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px 5px rgba(242, 104, 33, 0.05);
+}
+.enqCont .enquiries > div .contact h2 {
+  text-align: left;
+  color: white;
+}
+.enqCont .enquiries > div .contact p {
+  color: white;
+}
+.enqCont .enquiries > div .contact > div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.enqCont .enquiries > div .contact .gap {
+  height: 3vh;
+}
+.enqCont .enquiries > div .contact .gap2 {
+  height: 1vh;
+}
+.enqCont .enquiries > div .contact h3 {
+  font-family: 'Montserrat';
+  margin-bottom: 0px;
+}
+.enqCont .enquiries > div .contact p {
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0px;
+  padding: 0px;
+  margin-top: 10px;
+}
+.enqCont .enquiries > div .contact .icon {
+  width: 30px;
+  height: 30px;
+  background-color: #f26821;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.enqCont .enquiries > div .contact .social {
+  display: flex;
+  justify-content: space-around;
+  color: #213e7f;
+}
+.enqCont .enquiries > div .contact .social .icon {
+  width: 50px;
+  height: 50px;
+  transform: scale(0.9, 0.9);
+  background-color: transparent;
+  border: 1px solid transparent;
+  display: inline-block;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease;
+}
+.enqCont .enquiries > div .contact .social .icon:hover {
+  border: 1px solid #f26821;
+  transform: scale(1, 1);
+  cursor: pointer;
+}
+.enqCont .enquiries > div .contact .social .icon:hover svg {
+  fill: #f26821;
+}
+.enqCont .enquiries > div .contact .social .icon svg {
+  width: 30px;
+  height: 30px;
+  fill: white;
+  display: inline-block;
+}
+.enqCont .enquiries > div .contact .social .icon svg:hover {
+  fill: #f26821;
+}
+.enqCont .enquiries > div form {
+  flex: 2;
+  padding: 30px;
+  background-color: transparent;
+  border-radius: 15px;
+}
+.enqCont .enquiries > div form > div {
+  margin-top: 20px;
+  display: flex;
+  gap: 5vw;
+  margin-bottom: 6vh;
+}
+.enqCont .enquiries > div form > div input {
+  padding: 15px;
+  flex: 1;
+  border: none;
+  border-bottom: 1px solid #3964aa;
+  color: #3964aa;
+  background-color: transparent;
+}
+.enqCont .enquiries > div form > div input:focus {
+  outline: none;
+}
+.enqCont .enquiries > div form > div input::-webkit-input-placeholder {
+  color: #3964aa;
+}
+.enqCont .enquiries > div form > div textarea {
+  font-family: 'Montserrat';
+  width: 100%;
+  height: 15vh;
+  background-color: white;
+  color: #3964aa;
+  padding: 15px;
+  resize: none;
+  border: 1px solid transparent;
+}
+.enqCont .enquiries > div form > div textarea:focus {
+  outline: none;
+}
+.enqCont .enquiries > div form > div button {
+  justify-self: flex-end;
+  background: linear-gradient(90.11deg, #385197 -53.14%, #193064 45.57%, #0e1937 165.13%);
+}
+.enqCont .enquiries > div form > div button svg {
+  width: 13px;
+  height: 13px;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: 0.3s ease;
+}
+.enqCont .enquiries > div form > div button:hover {
+  cursor: pointer;
+  background: linear-gradient(90deg, #0e1937 -214.71%, #253f7a 40.96%, #0e1937 299.73%);
+}
+.enqCont .enquiries > div form > div button:hover svg {
+  opacity: 1;
+  transform: translateX(5px);
+}
+.enqCont .enquiries > div form > div.buttonCont {
+  justify-content: flex-end;
+}
+.enqCont .enquiries > div form > div.buttonCont button {
+  transition: 0.3s ease;
+  background: linear-gradient(90.11deg, #0e1937 -53.14%, #193064 45.57%, #0e1937 165.13%);
+  padding: 1.5vw 3.5vw;
+  font-size: 16px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
+  .enqCont .enquiries {
+    width: auto;
+  }
+  .enqCont .enquiries form input {
+    width: 70%;
+    transform: scale(0.8, 0.8);
+  }
+  .enqCont .enquiries form input:focus {
+    outline: none;
+    transform: scale(1, 1);
+  }
+  .enqCont .enquiries form button {
+    width: 50vw;
+  }
+}
