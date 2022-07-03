@@ -123,48 +123,32 @@ const courses = {
   ]
 };
 
-let S2Links = Array.from(
-  document.querySelectorAll(".container2 > div.navLocal a")
-);
-
-let business = document.querySelector("div#business");
-let institution = document.querySelector("div#institution");
-let individual = document.querySelector("div#individual");
-
-const handleClick = e => {
-  if (e.target.id == "individual") {
-    setItem("individual");
-  } else if (e.target.id == "business") {
-    setItem("business");
-  } else if (e.target.id == "institution") {
-    setItem("institution");
-  }
-};
-
-S2Links.forEach(link => {
-  link.addEventListener("click", e => {
-    switch (e.target.id) {
-      case "individual":
-        business.style.display = "none";
-        institution.style.display = "none";
-        individual.style.display = "flex";
-        break;
-      case "institution":
-        business.style.display = "none";
-        individual.style.display = "none";
-        institution.style.display = "flex";
-        break;
-      case "business":
-        individual.style.display = "none";
-        institution.style.display = "none";
-        business.style.display = "flex";
-        break;
-    }
-  });
-});
-
 // sec4
 let viewObject = "";
+// courses
+let menuIcon = document.getElementById("menuIcon");
+let short = document.querySelector(".menuIcon  .short")
+let menu = document.querySelector(".container4 > div > .navLocal");
+let view = document.querySelector(".container4 > div > .view");
+let text = document.querySelector(".menu .text");
+let listItems = Array.from(
+  document.querySelectorAll(".container4 .navLocal li")
+);
+let extractText = {};
+
+listItems.forEach(item => {
+  extractText[item.id] = {
+    text: item.innerHTML
+  };
+});
+
+console.log(extractText);
+
+menuIcon.addEventListener("click", () => {
+  menu.classList.toggle("show");
+  view.classList.toggle("hide");
+  short.classList.toggle("navOpen")
+});
 const setViewObject = i => {
   viewObject = i;
 };
@@ -215,6 +199,7 @@ const populateView = i => {
   view.innerHTML = "";
   items.forEach(item => {
     let cont = document.createElement("div");
+
     cont.classList.add("viewItem");
     let image = document.createElement("img");
     let title = document.createElement("h3");
@@ -235,9 +220,11 @@ s4NavItems.forEach(item => {
       item.classList.remove("current");
     });
     e.target.classList.add("current");
+    menu.classList.toggle("show");
+    view.classList.toggle("hide");
+    text.innerHTML = extractText[e.target.id].text;
     setViewObject(e.target.id);
     populateView(viewObject);
-    // console.log(e.target)
   });
 });
 

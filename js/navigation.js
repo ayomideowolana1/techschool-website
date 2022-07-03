@@ -94,3 +94,5 @@ sm_couples.forEach(couple => {
 
 console.log(sm_couples);
 
+
+
