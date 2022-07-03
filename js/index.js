@@ -1,4 +1,3 @@
-console.log("iiii");
 
 const courses = {
   microsoft: [
@@ -214,7 +213,6 @@ const handleClickS4 = e => {
 const populateView = i => {
   let view = document.querySelector(".container4 #view");
   let items = courses[i];
-  console.log(i);
   view.innerHTML = "";
   items.forEach(item => {
     let cont = document.createElement("div");
@@ -255,7 +253,6 @@ const toggle = () => {
     }
   });
 
-  console.log(toggleIcon, dropdown);
 };
 
 const animateHero = () => {

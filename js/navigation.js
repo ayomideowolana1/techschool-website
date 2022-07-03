@@ -17,8 +17,6 @@ let trainingSection = document
   .querySelector(".section1-cont")
   .getBoundingClientRect();
 
-// click navigations
-// couple = { button, element to navigate to }
 let couples = [
   {
     button: coursesButton,
@@ -38,13 +36,12 @@ let couples = [
   },
   {
     button: trainingBtn,
-    position: trainingSection.y-100
+    position: trainingSection.y - 100
   }
 ];
 
 // global navigation function
 const navigateTo = sectionPosition => {
-  console.log(sectionPosition);
   window.scrollTo(0, sectionPosition);
 };
 
@@ -53,3 +50,47 @@ couples.forEach(couple => {
     navigateTo(couple.position);
   });
 });
+
+// Mobile
+// DOM nodes
+let sm_logo = document.querySelector(".sm .logo");
+let sm_coursesButton = document.querySelector(
+  "#dropdown .links #courses-and-certification"
+);
+let sm_aboutUs = document.querySelector("#dropdown .links #about-us");
+let sm_contactUs = document.querySelector("#dropdown .links #contact-us");
+let dropdown = document.getElementById("dropdown")
+// console.log(sm_contactUs);
+
+let sm_couples = [
+  {
+    button: sm_logo,
+    position: 0
+  },
+  {
+    button: sm_coursesButton,
+    position: coursesSection.y + 130
+  },
+  {
+    button: sm_aboutUs,
+    position: aboutSection.y - 50
+  },
+  {
+    button: sm_contactUs,
+    position: contactSection.y + 140
+  }
+  // {
+  //   button: trainingBtn,
+  //   position: trainingSection.y - 100
+  // }
+];
+
+sm_couples.forEach(couple => {
+  couple.button.addEventListener("click", () => {
+    dropdown.style.display =  "none"
+    navigateTo(couple.position);
+  });
+});
+
+console.log(sm_couples);
+
