@@ -81,6 +81,7 @@
         h4 {
           margin-top: auto;
           color: white;
+          text-shadow: 0px 0px 4px black;
           margin: 0px;
           padding-bottom: 5px;
           .montserrat();
@@ -101,6 +102,20 @@
         }
 
       }
+    }
+  }
+  .container{
+    @media @mobile_portrait {
+      flex-direction: column;
+      gap: 10vw;
+       & > div {
+         .img{
+           filter: grayscale(0%);
+         }
+         .learn-more{
+           opacity: 1;
+         }
+       }
     }
   }
 }

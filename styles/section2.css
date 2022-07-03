@@ -92,6 +92,7 @@
 .section2Cont .container > div .img h4 {
   margin-top: auto;
   color: white;
+  text-shadow: 0px 0px 4px black;
   margin: 0px;
   padding-bottom: 5px;
   font-family: 'Montserrat';
@@ -107,4 +108,16 @@
 }
 .section2Cont .container > div:hover .learn-more:hover {
   text-decoration: underline;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
+  .section2Cont .container {
+    flex-direction: column;
+    gap: 10vw;
+  }
+  .section2Cont .container > div .img {
+    filter: grayscale(0%);
+  }
+  .section2Cont .container > div .learn-more {
+    opacity: 1;
+  }
 }

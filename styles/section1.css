@@ -84,6 +84,9 @@
     margin-top: 5vh;
     margin-bottom: 10vh;
   }
+  .section1 h1 {
+    font-size: 2.5vh;
+  }
   .section1 .container1 {
     flex-direction: column;
     gap: 2vh;

@@ -37,63 +37,40 @@
   padding: 2vw;
   transform: scale(0.9, 0.9);
 }
-.section4 .container4 > div .navLocal {
-  background-color: white;
-  padding-top: 20px;
-  flex: 1;
-  border-radius: 10px;
-  background: linear-gradient(338.66deg, #213e7f 2.62%, #6989c2 105.51%);
-}
 .section4 .container4 > div .navLocal ul {
-  height: 100%;
+  display: flex;
+  height: 90%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
   list-style: none;
   margin: 0px;
   padding: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 4vh;
-  overflow-y: scroll;
-  max-height: 60vh;
+  border-right: 1px solid whitesmoke;
   font-family: 'PT-sans';
-  font-weight: bold;
 }
 .section4 .container4 > div .navLocal ul li {
-  padding: 20px;
-  background-color: white;
-  text-align: center;
-  width: 70%;
-  margin: auto;
-  font-size: 14px;
-  font-weight: bold;
-  color: #27251f;
-  border-radius: 10px;
-  position: relative;
-  transition: 0.03s ease;
+  padding: 10px;
+  border: 1px solid transparent;
+  transition: 0.05s ease-in;
+  transform: scale(0.9, 0.9);
 }
 .section4 .container4 > div .navLocal ul li:hover {
-  border: none;
   cursor: pointer;
 }
 .section4 .container4 > div .navLocal ul li.current {
-  border: 1px solid transparent;
-  background-color: #f26821;
-  color: white;
-}
-.section4 .container4 > div .navLocal ul li.current svg {
-  width: 20px !important;
-  height: 20px !important;
-  fill: #f26821;
-  display: inline-block;
-  display: none;
+  border: 1px solid #f26821;
+  transform: scale(1, 1);
 }
 .section4 .container4 > div .view {
   flex: 3;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 1vw;
   flex-wrap: wrap;
   overflow-y: scroll;
   max-height: 60vh;
+  min-height: 60vh;
   padding: 3vw;
   padding-top: 10px;
 }
@@ -132,6 +109,9 @@
   margin-bottom: 10px;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
+  .section4 .container4 h1 {
+    font-size: 2.5vh;
+  }
   .section4 .container4 > div {
     margin-top: 5vh;
     transform: scale(1, 1);

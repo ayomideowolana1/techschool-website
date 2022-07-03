@@ -214,6 +214,7 @@ const handleClickS4 = e => {
 const populateView = i => {
   let view = document.querySelector(".container4 #view");
   let items = courses[i];
+  console.log(i);
   view.innerHTML = "";
   items.forEach(item => {
     let cont = document.createElement("div");
@@ -239,6 +240,7 @@ s4NavItems.forEach(item => {
     e.target.classList.add("current");
     setViewObject(e.target.id);
     populateView(viewObject);
+    // console.log(e.target)
   });
 });
 
@@ -267,23 +269,20 @@ const animateHero = () => {
   const setTransition = (elem, animClass) => {
     elem.classList.add("animate__animated");
     elem.classList.add(animClass);
-    console.log(elem.classList);
-
   };
 
   setTimeout(() => {
-    setTransition(h1,"animate__fadeInUp");
+    setTransition(h1, "animate__fadeInUp");
     setTransition(h1, "animate__fast");
     makeVisible(h1);
   }, 800);
   setTimeout(() => {
-    setTransition(p,"animate__fadeInUp");
+    setTransition(p, "animate__fadeInUp");
     setTransition(p, "animate__fast");
-    setTransition(button,"animate__fadeInUp");
+    setTransition(button, "animate__fadeInUp");
     setTransition(button, "animate__fast");
     makeVisible(p);
   }, 1000);
-  
 };
 
 const load = () => {

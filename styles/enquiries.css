@@ -205,16 +205,35 @@
 @media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
   .enqCont .enquiries {
     width: auto;
-  }
-  .enqCont .enquiries form input {
-    width: 70%;
-    transform: scale(0.8, 0.8);
-  }
-  .enqCont .enquiries form input:focus {
-    outline: none;
     transform: scale(1, 1);
   }
-  .enqCont .enquiries form button {
+  .enqCont .enquiries > div {
+    flex-direction: column;
+    max-width: none;
+  }
+  .enqCont .enquiries > div form > div {
+    flex-direction: column;
+    margin-bottom: 5vw;
+  }
+  .enqCont .enquiries > div form > div textarea {
+    width: auto;
+  }
+  .enqCont .enquiries > div form > div input {
+    transform: scale(1, 1);
+    margin-bottom: 4vh;
+  }
+  .enqCont .enquiries > div form > div input:focus {
+    outline: none;
+  }
+  .enqCont .enquiries > div form > div.buttonCont {
+    margin-top: 2vh;
+  }
+  .enqCont .enquiries > div form > div.buttonCont button {
     width: 50vw;
+    height: 45px;
+  }
+  .enqCont .enquiries > div form > div.buttonCont button svg {
+    opacity: 1;
+    transform: translateX(5px);
   }
 }

@@ -226,17 +226,38 @@
   @media @mobile_portrait {
     .enquiries {
       width: auto;
-      form {
-        input {
-          width: 70%;
-          transform: scale(0.8, 0.8);
-          &:focus {
-            outline: none;
-            transform: scale(1, 1);
+      transform: scale(1,1);
+      &>div{
+        flex-direction: column;
+        max-width: none;
+
+        form {
+          &>div{
+            flex-direction: column;
+            margin-bottom: 5vw;
+            textarea{
+              width: auto;
+            }
+            input {
+              // width: 70%;
+              transform: scale(1, 1);
+              margin-bottom: 4vh;
+              &:focus {
+                outline: none;
+              }
+            }
+            &.buttonCont{
+              margin-top: 2vh;
+              button {
+                width: 50vw;
+                height: 45px;
+                svg {
+                opacity: 1;
+                transform: translateX(5px);
+              }
+              }
+            }
           }
-        }
-        button {
-          width: 50vw;
         }
       }
     }

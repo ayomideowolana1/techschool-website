@@ -68,26 +68,18 @@
 .navContainer .contact {
   flex: 1;
   display: flex;
-  justify-content: flex-end;
-}
-.navContainer .contact > span {
-  text-align: center;
-  display: flex;
-  align-items: center;
+  justify-content: center;
   border-radius: 5px;
   background-color: #213e7f;
 }
-.navContainer .contact > span > span {
-  padding-left: 10px;
-  padding-right: 10px;
-  padding: 10px 20px;
-  color: white;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
+.navContainer .contact a {
+  flex: 1;
   display: inline-block;
+  text-align: center;
+  padding: 10px;
+  color: white;
 }
-.navContainer .contact > span > span .arrow {
+.navContainer .contact a svg {
   font-size: 16px;
   transform: translateX(-10px);
   transition: 0.5s ease;
@@ -95,10 +87,10 @@
   opacity: 0;
   font-weight: bold;
 }
-.navContainer .contact > span > span:hover {
+.navContainer .contact a:hover {
   cursor: pointer;
 }
-.navContainer .contact > span > span:hover .arrow {
+.navContainer .contact a:hover svg {
   opacity: 1;
   transform: translateX(3px);
 }
@@ -107,9 +99,11 @@
   margin-left: 7px;
   margin-right: 7px;
   height: 15px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 .navContainer .contact svg {
-  width: 10px ;
+  width: 10px;
   height: 10px;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
@@ -253,7 +247,7 @@
   text-decoration: none;
   border-radius: 5px;
   display: flex;
-  border: 1px solid transparent;
+  max-width: 120px;
   opacity: 0;
   font-family: 'PT-sans';
 }
@@ -290,26 +284,23 @@
   margin-top: 5px;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
-  .hero {
-    width: 95vw;
-    margin-top: 2vh;
-    margin-bottom: 3vh;
-  }
   .hero h1,
   .hero h2 {
-    text-shadow: none;
-    text-shadow: 0px 0px 2px #4242429a;
+    font-size: 4vh;
+    margin-top: -5vh;
   }
   .hero .cta {
     margin-top: 1vh;
     padding: 3vw 4vw;
-    display: inline-block;
-    width: -moz-min-content;
     max-width: 200px;
     color: white;
     background-color: #f26821;
     text-decoration: none;
     font-family: 'Roboto-condensed';
+  }
+  .hero .cta .arrow {
+    opacity: 1;
+    transform: translateX(5px);
   }
 }
 .section1 {
@@ -373,6 +364,9 @@
   .section1 {
     margin-top: 5vh;
     margin-bottom: 10vh;
+  }
+  .section1 h1 {
+    font-size: 2.5vh;
   }
   .section1 .container1 {
     flex-direction: column;
@@ -452,6 +446,7 @@
 .section2Cont .container > div .img h4 {
   margin-top: auto;
   color: white;
+  text-shadow: 0px 0px 4px black;
   margin: 0px;
   padding-bottom: 5px;
   font-family: 'Montserrat';
@@ -467,6 +462,18 @@
 }
 .section2Cont .container > div:hover .learn-more:hover {
   text-decoration: underline;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
+  .section2Cont .container {
+    flex-direction: column;
+    gap: 10vw;
+  }
+  .section2Cont .container > div .img {
+    filter: grayscale(0%);
+  }
+  .section2Cont .container > div .learn-more {
+    opacity: 1;
+  }
 }
 .section3 .container3 {
   padding: 0px;
@@ -515,7 +522,6 @@
     padding: 10px;
     width: 25vw;
     height: auto;
-    transform: scale(0.6, 0.6);
   }
 }
 @media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
@@ -538,63 +544,40 @@
   padding: 2vw;
   transform: scale(0.9, 0.9);
 }
-.section4 .container4 > div .navLocal {
-  background-color: white;
-  padding-top: 20px;
-  flex: 1;
-  border-radius: 10px;
-  background: linear-gradient(338.66deg, #213e7f 2.62%, #6989c2 105.51%);
-}
 .section4 .container4 > div .navLocal ul {
-  height: 100%;
+  display: flex;
+  height: 90%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
   list-style: none;
   margin: 0px;
   padding: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 4vh;
-  overflow-y: scroll;
-  max-height: 60vh;
+  border-right: 1px solid whitesmoke;
   font-family: 'PT-sans';
-  font-weight: bold;
 }
 .section4 .container4 > div .navLocal ul li {
-  padding: 20px;
-  background-color: white;
-  text-align: center;
-  width: 70%;
-  margin: auto;
-  font-size: 14px;
-  font-weight: bold;
-  color: #27251f;
-  border-radius: 10px;
-  position: relative;
-  transition: 0.03s ease;
+  padding: 10px;
+  border: 1px solid transparent;
+  transition: 0.05s ease-in;
+  transform: scale(0.9, 0.9);
 }
 .section4 .container4 > div .navLocal ul li:hover {
-  border: none;
   cursor: pointer;
 }
 .section4 .container4 > div .navLocal ul li.current {
-  border: 1px solid transparent;
-  background-color: #f26821;
-  color: white;
-}
-.section4 .container4 > div .navLocal ul li.current svg {
-  width: 20px !important;
-  height: 20px !important;
-  fill: #f26821;
-  display: inline-block;
-  display: none;
+  border: 1px solid #f26821;
+  transform: scale(1, 1);
 }
 .section4 .container4 > div .view {
   flex: 3;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 1vw;
   flex-wrap: wrap;
   overflow-y: scroll;
   max-height: 60vh;
+  min-height: 60vh;
   padding: 3vw;
   padding-top: 10px;
 }
@@ -633,6 +616,9 @@
   margin-bottom: 10px;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
+  .section4 .container4 h1 {
+    font-size: 2.5vh;
+  }
   .section4 .container4 > div {
     margin-top: 5vh;
     transform: scale(1, 1);
@@ -847,17 +833,36 @@
 @media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
   .enqCont .enquiries {
     width: auto;
-  }
-  .enqCont .enquiries form input {
-    width: 70%;
-    transform: scale(0.8, 0.8);
-  }
-  .enqCont .enquiries form input:focus {
-    outline: none;
     transform: scale(1, 1);
   }
-  .enqCont .enquiries form button {
+  .enqCont .enquiries > div {
+    flex-direction: column;
+    max-width: none;
+  }
+  .enqCont .enquiries > div form > div {
+    flex-direction: column;
+    margin-bottom: 5vw;
+  }
+  .enqCont .enquiries > div form > div textarea {
+    width: auto;
+  }
+  .enqCont .enquiries > div form > div input {
+    transform: scale(1, 1);
+    margin-bottom: 4vh;
+  }
+  .enqCont .enquiries > div form > div input:focus {
+    outline: none;
+  }
+  .enqCont .enquiries > div form > div.buttonCont {
+    margin-top: 2vh;
+  }
+  .enqCont .enquiries > div form > div.buttonCont button {
     width: 50vw;
+    height: 45px;
+  }
+  .enqCont .enquiries > div form > div.buttonCont button svg {
+    opacity: 1;
+    transform: translateX(5px);
   }
 }
 footer {

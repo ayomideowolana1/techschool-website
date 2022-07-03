@@ -97,8 +97,9 @@
     text-decoration: none;
     border-radius: 5px;
     display: flex;
-    border: 1px solid transparent;
+    max-width: 120px;
     opacity: 0;
+    
     &.visible{
       .visible;
     }
@@ -138,24 +139,27 @@
     }
   }
   @media @mobile_portrait {
-    width: 95vw;
-    margin-top: 2vh;
-    margin-bottom: 3vh;
+    // width: 95vw;
+    // margin-top: 2vh;
+    // margin-bottom: 3vh;
     h1,
     h2 {
-      text-shadow: none;
-      text-shadow: 0px 0px 2px #4242429a;
+      // text-shadow: none;
+      // text-shadow: 0px 0px 2px #4242429a;
+      font-size: 4vh;
+      margin-top: -5vh;
     }
     .cta {
       margin-top: 1vh;
       padding: 3vw 4vw;
-      // border: 1px solid;
-      display: inline-block;
-      width: -moz-min-content;
       max-width: 200px;
       color: white;
       background-color: @orange-red;
       text-decoration: none;
+      .arrow {
+        opacity: 1;
+        transform: translateX(5px);
+      }
       .roboto-condensed();
     }
   }
