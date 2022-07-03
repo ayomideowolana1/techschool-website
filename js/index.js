@@ -1,4 +1,3 @@
-
 const courses = {
   microsoft: [
     { name: "Office 365", url: "./images/microsoft/office-365.png" },
@@ -252,7 +251,6 @@ const toggle = () => {
       dropdown.style.display = "block";
     }
   });
-
 };
 
 const animateHero = () => {
