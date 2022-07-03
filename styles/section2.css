@@ -38,7 +38,9 @@
 }
 @media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
   .section2Cont h1 {
-    font-size: 2.5vh;
+    font-size: 3vh;
+    padding-left: 5.96vw;
+    padding-right: 5.96vw;
   }
 }
 .section2Cont .container {

@@ -110,7 +110,7 @@
 }
 @media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
   .section4 .container4 h1 {
-    font-size: 2.5vh;
+    font-size: 3vh;
   }
   .section4 .container4 > div {
     margin-top: 5vh;

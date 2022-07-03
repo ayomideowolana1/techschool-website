@@ -370,7 +370,7 @@
     margin-bottom: 10vh;
   }
   .section1 h1 {
-    font-size: 2.5vh;
+    font-size: 3vh;
     padding-left: 5.96vw;
     padding-right: 5.96vw;
   }
@@ -398,7 +398,9 @@
 }
 @media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
   .section2Cont h1 {
-    font-size: 2.5vh;
+    font-size: 3vh;
+    padding-left: 5.96vw;
+    padding-right: 5.96vw;
   }
 }
 .section2Cont .container {
@@ -526,6 +528,9 @@
     margin-left: auto;
     margin-right: auto;
   }
+  .section3 .container3 h1 {
+    font-size: 4vh;
+  }
   .section3 .container3 div {
     flex-wrap: wrap;
   }
@@ -628,7 +633,7 @@
 }
 @media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
   .section4 .container4 h1 {
-    font-size: 2.5vh;
+    font-size: 3vh;
   }
   .section4 .container4 > div {
     margin-top: 5vh;
