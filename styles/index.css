@@ -284,6 +284,9 @@
   margin-top: 5px;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
+  .hero {
+    padding-right: 5.96vw;
+  }
   .hero h1,
   .hero h2 {
     font-size: 4vh;
@@ -291,11 +294,10 @@
   }
   .hero .cta {
     margin-top: 1vh;
-    padding: 3vw 4vw;
-    max-width: 200px;
     color: white;
     background-color: #f26821;
     text-decoration: none;
+    border: 1px solid red;
     font-family: 'Roboto-condensed';
   }
   .hero .cta .arrow {
@@ -389,6 +391,11 @@
   font-size: 35px;
   color: white;
   font-family: 'Montserrat';
+}
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
+  .section2Cont h1 {
+    font-size: 2.5vh;
+  }
 }
 .section2Cont .container {
   padding-bottom: 5vh;

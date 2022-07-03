@@ -36,6 +36,11 @@
   color: white;
   font-family: 'Montserrat';
 }
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
+  .section2Cont h1 {
+    font-size: 2.5vh;
+  }
+}
 .section2Cont .container {
   padding-bottom: 5vh;
   display: flex;
