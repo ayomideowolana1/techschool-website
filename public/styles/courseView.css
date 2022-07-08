@@ -183,6 +183,7 @@
   }
   #courseView .cta {
     flex-direction: column;
+    border: none;
   }
   #courseView .cta a {
     width: 55vw;
