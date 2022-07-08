@@ -53,6 +53,7 @@
 }
 .navContainer .logo img {
   max-width: 6vw;
+  background: none;
 }
 .navContainer .links {
   flex: 3;

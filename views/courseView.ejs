@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./components/meta'); %>
+  </head>
+  <body>
+    
+    <%- include("./components/nav2"); %>
+    <div id="courseView">
+      <main>
+        <header>
+          <a id="back" href="">back</a>
+          <div>
+            <img src="<%= data.url %>" alt="" />
+            <h1><%= data.name %></h1>
+          </header>
+          <section class="info">
+            <div>
+              <img src="/svgs/duration.svg" alt="">
+              <h3>Duration</h3>
+              <span> <%= placeholders.duration %> </span>
+            </div>
+            <div>
+              <img src="/svgs/level.svg" alt="">
+              <h3>Level</h3>
+              <span> <%= placeholders.level %> </span>
+            </div>
+            <div>
+              <img src="/svgs/platform.svg" alt="">
+              <h3>Platform</h3>
+              <span> <%= placeholders.platform %> </span>
+            </div>
+          </section>
+          <section class="text last">
+            <h2>What you'll learn</h2>
+            <p>After completing this course, students will be able to:</p>
+            <ul>
+              <% for(var i=0; i<placeholders.learn.length; i++) { %>
+                <li>
+                  <%= placeholders.learn[i] %>
+                </li>
+              <% } %>
+            </ul>
+            <h2>More About this course</h2>
+            <p>This course is made up of the following modules:</p>
+            <ul>
+              <% for(var i=0; i<placeholders.more.length; i++) { %>
+                <li>
+                  <%= placeholders.more[i] %>
+                </li>
+              <% } %>
+            </ul>
+          </section>
+        </main>
+        <div class="cta">
+          <a href="" class="one">
+            <span>Download Brochure</span> 
+            <svg
+            viewBox="0 0 76 88"
+            fill="none"
+            class="arrow"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+          <g >
+            <path
+            d="M0.51958 1.75807L74.1295 44.0024L0.739832 86.6283L0.664203 57.4845L22.3139 44.4936L23.0508 44.0515L22.3022 43.6294L0.596487 31.3901L0.51958 1.75807Z"
+            
+            
+            />
+          </g>
+            </svg>
+          </a>
+          <a href="" class="two">
+            <span>
+
+              Enquire
+            </span>
+             <svg
+            viewBox="0 0 76 88"
+            fill="none"
+            class="arrow"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+          <g >
+            <path
+            d="M0.51958 1.75807L74.1295 44.0024L0.739832 86.6283L0.664203 57.4845L22.3139 44.4936L23.0508 44.0515L22.3022 43.6294L0.596487 31.3901L0.51958 1.75807Z"
+            
+            
+            />
+          </g>
+            </svg>
+          </a>
+        </div>
+      </div>
+    <%- include("./components/enquiries"); %>
+    <%- include("./components/footer"); %>
+    <%- include("./components/copyright"); %>
+
+    <script>
+      let back = document.getElementById("back");
+      back.addEventListener("click", () => {
+        history.back();
+      });
+    </script>
+  </body>
+</html>

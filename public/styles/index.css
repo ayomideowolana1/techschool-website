@@ -29,6 +29,7 @@
 }
 .navContainer .logo img {
   max-width: 6vw;
+  background: none;
 }
 .navContainer .links {
   flex: 3;
@@ -1029,6 +1030,173 @@ footer ul li div {
 @font-face {
   font-family: PT-sans;
   src: url('../fonts/PT-sans/PTSans-Regular.ttf');
+}
+#courseView {
+  box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.25);
+  max-width: 1200px;
+  margin: auto;
+  font-family: 'Roboto';
+}
+#courseView section {
+  margin-bottom: 5vh;
+}
+#courseView section.last {
+  margin-bottom: 0px;
+}
+#courseView header {
+  display: flex;
+  gap: 10vw;
+  border-bottom: 1px solid #f2f2f2;
+  align-items: center;
+  position: relative;
+  padding: 2vw;
+}
+#courseView header a {
+  position: absolute;
+  top: 10vh;
+  left: -5vw;
+}
+#courseView header div {
+  display: flex;
+  align-items: center;
+}
+#courseView header div h1 {
+  font-size: 35px;
+  font-family: 'Montserrat';
+  margin: 0px;
+}
+#courseView header div img {
+  width: 100px;
+  height: 100px;
+  margin-right: 3vw;
+}
+#courseView .info {
+  display: flex;
+  justify-content: center;
+  gap: 15vw;
+}
+#courseView .info div {
+  padding: 1vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1vh;
+}
+#courseView .info div h3,
+#courseView .info div p {
+  margin: 0px;
+}
+#courseView .info div img {
+  width: 4vw;
+  height: 4vw;
+}
+#courseView .text {
+  padding: 2vw;
+}
+#courseView .text h2 {
+  font-family: 'Montserrat';
+  font-size: 1.7vw;
+}
+#courseView .text li {
+  padding: 5px;
+}
+#courseView .cta {
+  height: 228px;
+  background: linear-gradient(180deg, #6989c2 0%, #1c366f 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3vw;
+}
+#courseView .cta a {
+  display: inline-block;
+  color: white;
+  width: 13vw;
+  height: 4vw;
+  border: 1px solid;
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  text-decoration: none;
+  border: 2px solid white;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+#courseView .cta a.one {
+  background-color: white;
+  color: #2c394f;
+}
+#courseView .cta a.two {
+  background-color: transparent;
+  color: white;
+}
+#courseView .cta a svg {
+  width: 10px;
+  height: 10px;
+}
+#courseView .cta a .arrow {
+  font-size: 16px;
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: 0.5s ease;
+  font-weight: bold;
+}
+#courseView .cta a:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 4px #2c394f;
+}
+#courseView .cta a:hover.two {
+  background-color: white;
+  color: #2c394f;
+}
+#courseView .cta a:hover .arrow {
+  opacity: 1;
+  fill: #f26821;
+  transform: translateX(5px);
+}
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
+  #courseView header {
+    padding-top: 50px;
+  }
+  #courseView header a {
+    top: 15px;
+    left: 10px;
+  }
+  #courseView header div h1 {
+    font-size: 20px;
+  }
+  #courseView .info {
+    display: flex;
+    gap: 10px;
+  }
+  #courseView .info div {
+    flex: 1;
+  }
+  #courseView .info div h3 {
+    font-size: 16px;
+  }
+  #courseView .info div span {
+    font-size: 14px;
+  }
+  #courseView .info div img {
+    transform: scale(1.7, 1.7);
+    margin-bottom: 15px;
+  }
+  #courseView .text {
+    padding: 3vw;
+  }
+  #courseView .text h2 {
+    font-size: 20px;
+  }
+  #courseView .cta {
+    flex-direction: column;
+  }
+  #courseView .cta a {
+    width: 55vw;
+    height: 17vw;
+  }
 }
 html {
   scroll-behavior: smooth;
