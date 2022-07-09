@@ -3,7 +3,7 @@
     commandOrigin= "config"
     publish= "/opt/build/repo/dist"
     publishOrigin= "ui"
-    functionsDirectory= "/opt/build/repo/functions"
+    functionsDirectory= "/functions"
 [[redirects]]
     from=  "/*"
     status= "200"
