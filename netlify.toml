@@ -1,7 +1,7 @@
 [build]
     functions="functions"
     commandOrigin= "config"
-    publish= "/opt/build/repo/dist"
+    publish= "/dist"
     publishOrigin= "ui"
     functionsDirectory= "/functions"
 [[redirects]]
