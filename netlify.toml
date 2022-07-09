@@ -1,14 +1,6 @@
 [build]
     functions="functions"
-    commandOrigin= "config"
-    publish= "/dist"
-    publishOrigin= "ui"
-    functionsDirectory= "/functions"
 [[redirects]]
-    from=  "/*"
-    status= "200"
-    to= "/.netlify/functions/api/:splat"
-    redirectsOrigin = "config"
-
-
- 
+    to="/.netlify/functions/api/:splat"
+    from="/*"
+    status=200    
