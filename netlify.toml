@@ -1,7 +1,14 @@
 [build]
     command = "npm install && npm run build"
-    functions="functions"
+    commandOrigin= "config"
+    publish= "/opt/build/repo/dist"
+    publishOrigin= "ui"
+    functionsDirectory= "/opt/build/repo/functions"
 [[redirects]]
-    to="/.netlify/functions/api/:splat"
-    from="/*"
-    status=200    
+    from=  "/*"
+    status= "200"
+    to= "/.netlify/functions/api/:splat"
+    redirectsOrigin = "config"
+
+
+ 
