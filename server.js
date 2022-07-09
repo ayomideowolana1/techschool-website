@@ -1,16 +1,20 @@
 const express = require("express");
 const path = require("path");
 const courses = require("./data/courses");
+const router = express.Router();
+
 
 const app = express();
-app.use(express.static("public"));
+
+let staticPath = path.join('dist','public')
+router.use(express.static("public"));
 app.set("view engine", "ejs");
 
-app.get("/", (req, res) => {
+router.get("/", (req, res) => {
   res.render("landingpage");
 });
 
-app.get("/courses/:courseId/:courseName", (req, res) => {
+router.get("/courses/:courseId/:courseName", (req, res) => {
   const { courseId, courseName } = req.params;
   const queryResult = { id: courseId, name: courseName };
 
@@ -60,8 +64,14 @@ app.get("/courses/:courseId/:courseName", (req, res) => {
   res.render("courseView", { data: info(dataToRender), placeholders });
 });
 
-const port = process.env.PORT || 3000;
+app.use(router)
+
+
+const port = process.env.PORT || 5500;
 
 app.listen(port, () => {
   console.log(`Listening on port:${port}`);
 });
+
+
+module.exports = {app,router}
