@@ -1,18 +1,14 @@
+const { Module } = require("../data/struct");
+let contentAvailable = true;
+// duration:"",
+// description:``,
+
+const microsoft = require("./microsoft-office");
+const adobe = require("./adobe");
+const technical = require("./technical");
+
 const courses = {
-  microsoft: [
-    {
-      name: "Office 365",
-      url: "/images/microsoft/office-365.png"
-    },
-    { name: "Access", url: "/images/microsoft/m-access.png" },
-    { name: "OneNote", url: "/images/microsoft/m-oneNote.png" },
-    { name: "OutLook", url: "/images/microsoft/m-outLook.png" },
-    { name: "Teams", url: "/images/microsoft/m-teams.png" },
-    { name: "Powerpoint", url: "/images/microsoft/m-powerpoint.png" },
-    { name: "Project", url: "/images/microsoft/m-project.png" },
-    { name: "Publisher", url: "/images/microsoft/m-publisher.png" },
-    { name: "Visio", url: "/images/microsoft/m-visio.png" }
-  ],
+  microsoft,
   Mtechnical: [
     { name: "Azure", url: "/images/mtechnical/azure.png" },
     { name: "Microsoft 365", url: "/images/microsoft/office-365.png" },
@@ -25,19 +21,42 @@ const courses = {
     { name: "Exchange", url: "/images/mtechnical/exchange.png" },
     { name: "SharePoint", url: "/images/mtechnical/sharepoint.png" },
     { name: "Visual Studio", url: "/images/mtechnical/visualstudio.png" },
-    { name: "SQL Server", url: "/images/mtechnical/sql-server.png" },
+    {
+      contentAvailable,
+      name: "DB2 SQL Training",
+      url: "/images/mtechnical/sql-server.png",
+      duration: "5 Days",
+      description: `• Learn how to use SQL arithmetic operations.
+    • Learn how to use scalar and column functions.
+    • Learn how to use UNION and UNION ALL.`,
+      modules: [
+        new Module("The course covers the following topics:", [
+          "    • Introduction",
+          "    • Simple SQL Queries",
+          "    • Retrieving Data from Multiple Tables",
+          "    • Scalar Functions and Arithmetic",
+          "    • Column Functions and Grouping",
+          "    • UNION and UNION ALL",
+          "    • Using Subqueries",
+          "    • Maintaining data"
+        ]),
+        new Module("By the end of the course, you will be able to:", [
+          "    • Code SQL statements to retrieve data from a DB2 or Informix table, including the SELECT, FROM, WHERE, GROUP BY, HAVING and ORDER BY clauses",
+          "    • Code inner joins and non-correlated subqueries",
+          "    • Use SQL arithmetic operations",
+          "    • Use scalar and column functions",
+          "    • Use UNION and UNION ALL",
+          "    • INSERT, UPDATE and DELETE rows",
+          "    • Code simple CREATE TABLE and CREATE VIEW statements"
+        ])
+      ]
+    },
+
     { name: "System Center", url: "/images/mtechnical/system-center.png" },
     { name: "Windows", url: "/images/mtechnical/windows.png" },
     { name: "Windows Server", url: "/images/mtechnical/w-server.png" }
   ],
-  adobe: [
-    { name: "Photoshop", url: "/images/adobe/photoshop.png" },
-    { name: "InDesign", url: "/images/adobe/indesign.png" },
-    { name: "Illustrator", url: "/images/adobe/illustrator.png" },
-    { name: "Dreamweaver", url: "/images/adobe/dreamwaver.png" },
-    { name: "Acrobat", url: "/images/adobe/acrobat.png" },
-    { name: "Captivate", url: "/images/adobe/captivate.png" }
-  ],
+  adobe,
   project: [
     { name: "COBIT", url: "/images/project-mgt/cobit.png" },
     { name: "DevOps", url: "/images/project-mgt/devops.png" },
@@ -101,27 +120,13 @@ const courses = {
     { name: "Human Resource Management", url: "/images/leadership/hr.png" },
     { name: "Business Analysis", url: "/images/leadership/ba.png" }
   ],
-  technical: [
-    { name: "Google Cloud", url: "/images/technical/google-cloud.png" },
-    { name: "Citrix", url: "/images/technical/citrix.png" },
-    { name: "Cisco", url: "/images/technical/cisco.png" },
-    { name: "CompTIA", url: "/images/technical/compTIA.png" },
-    { name: "IBM", url: "/images/technical/ibm.png" },
-    { name: "AWS", url: "/images/technical/aws.png" },
-    { name: "CertNexus", url: "/images/technical/certnexus.png" },
-    {
-      name: "Programming and Development",
-      url: "/images/technical/programming.png"
-    },
-    { name: "Red Hat", url: "/images/technical/redhat.png" }
-  ],
+  technical,
   analytic: [
     { name: "Power BI", url: "/images/analytic/power-bi.png" },
     { name: "Tableau", url: "/images/analytic/tableau.png" },
     { name: "Python", url: "/images/analytic/python.png" },
     { name: "SAP Business Object", url: "/images/analytic/sap.png" },
     { name: "Big Data Analytics", url: "/images/analytic/big-data.png" },
-    { name: "Advance Excel", url: "/images/analytic/excel.png" },
     { name: "R-Programming", url: "/images/analytic/R.png" }
   ]
 };

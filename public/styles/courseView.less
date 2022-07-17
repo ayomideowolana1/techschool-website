@@ -68,6 +68,9 @@
       .montserrat();
       font-size: 1.7vw;
     }
+    p{
+      line-height: 1.5;
+    }
     li {
       padding: 5px;
     }
@@ -101,11 +104,11 @@
         background-color: transparent;
         color: white;
       }
-      svg{
+      svg {
         width: 10px;
-      height: 10px;
+        height: 10px;
       }
-       .arrow {
+      .arrow {
         font-size: 16px;
         display: inline-block;
         opacity: 0;
@@ -118,7 +121,7 @@
         cursor: pointer;
         // text-decoration: underline;
         box-shadow: 0px 0px 5px 4px @prussian-blue;
-        &.two{
+        &.two {
           background-color: white;
           color: @prussian-blue;
         }
@@ -132,49 +135,48 @@
   }
 }
 
-#courseView{
+#courseView {
   @media @mobile_portrait {
-    header{
+    header {
       padding-top: 50px;
-      a{
-        top:15px;
+      a {
+        top: 15px;
         left: 10px;
       }
-      div{
-        h1{
+      div {
+        h1 {
           font-size: 20px;
         }
       }
     }
-    .info{
+    .info {
       display: flex;
       gap: 10px;
-      div{
+      div {
         flex: 1;
         // border: 1px solid;
-        h3{
+        h3 {
           font-size: 16px;
         }
-        span{
+        span {
           font-size: 14px;
-
         }
-        img{
-          transform: scale(1.7,1.7);
+        img {
+          transform: scale(1.7, 1.7);
           margin-bottom: 15px;
         }
       }
     }
-    .text{
+    .text {
       padding: 3vw;
-      h2{
+      h2 {
         font-size: 20px;
       }
     }
-    .cta{
+    .cta {
       flex-direction: column;
       border: none;
-      a{
+      a {
         width: 55vw;
         height: 17vw;
       }

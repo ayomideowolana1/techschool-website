@@ -96,6 +96,13 @@
   display: inline-block;
   border-radius: 50%;
   margin-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.enqCont .enquiries > div .contact .icon img {
+  width: 20px;
+  height: 20px;
 }
 .enqCont .enquiries > div .contact .social {
   display: flex;

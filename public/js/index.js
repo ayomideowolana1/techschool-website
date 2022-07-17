@@ -1,14 +1,31 @@
 const courses = {
   microsoft: [
-    { name: "Office 365", url: "/images/microsoft/office-365.png" },
-    { name: "Access", url: "/images/microsoft/m-access.png" },
+    {
+      name: "Office 365 Administrator (MS-030T00)",
+      url: "/images/microsoft/office-365.png"
+    },
+    {
+      name: "Microsoft Access VBA - Programming",
+      url: "/images/microsoft/m-access.png"
+    },
     { name: "OneNote", url: "/images/microsoft/m-oneNote.png" },
-    { name: "OutLook", url: "/images/microsoft/m-outLook.png" },
-    { name: "Teams", url: "/images/microsoft/m-teams.png" },
-    { name: "Powerpoint", url: "/images/microsoft/m-powerpoint.png" },
-    { name: "Project", url: "/images/microsoft/m-project.png" },
-    { name: "Publisher", url: "/images/microsoft/m-publisher.png" },
-    { name: "Visio", url: "/images/microsoft/m-visio.png" }
+    // { name: "OutLook", url: "/images/microsoft/m-outLook.png" },
+    {
+      name: "Managing Microsoft Teams (MS-700T00)",
+      url: "/images/microsoft/m-teams.png"
+    },
+    {
+      name: "Microsoft PowerPoint 2016",
+      url: "/images/microsoft/m-powerpoint.png"
+    },
+    { name: "Microsoft Project 2016", url: "/images/microsoft/m-project.png" },
+    // { name: "Publisher", url: "/images/microsoft/m-publisher.png" },
+    { name: "Microsoft Visio 2016", url: "/images/microsoft/m-visio.png" },
+    {
+      name: "Microsoft 365 Messaging (MS-203T00)",
+      url: "/images/microsoft/office-365.png"
+    },
+    { name: "Microsoft Excel Training", url: "/images/analytic/excel.png" }
   ],
   Mtechnical: [
     { name: "Azure", url: "/images/mtechnical/azure.png" },
@@ -22,14 +39,20 @@ const courses = {
     { name: "Exchange", url: "/images/mtechnical/exchange.png" },
     { name: "SharePoint", url: "/images/mtechnical/sharepoint.png" },
     { name: "Visual Studio", url: "/images/mtechnical/visualstudio.png" },
-    { name: "SQL Server", url: "/images/mtechnical/sql-server.png" },
+    {
+      name: "DB2 SQL Training",
+      url: "/images/mtechnical/sql-server.png"
+    },
     { name: "System Center", url: "/images/mtechnical/system-center.png" },
     { name: "Windows", url: "/images/mtechnical/windows.png" },
     { name: "Windows Server", url: "/images/mtechnical/w-server.png" }
   ],
   adobe: [
-    { name: "Photoshop", url: "/images/adobe/photoshop.png" },
-    { name: "InDesign", url: "/images/adobe/indesign.png" },
+    {
+      name: "Photoshop Fundamentals",
+      url: "/images/adobe/photoshop.png"
+    },
+    { name: "Adobe InDesign Fundamentals", url: "/images/adobe/indesign.png" },
     { name: "Illustrator", url: "/images/adobe/illustrator.png" },
     { name: "Dreamweaver", url: "/images/adobe/dreamwaver.png" },
     { name: "Acrobat", url: "/images/adobe/acrobat.png" },
@@ -100,17 +123,101 @@ const courses = {
   ],
   technical: [
     { name: "Google Cloud", url: "/images/technical/google-cloud.png" },
-    { name: "Citrix", url: "/images/technical/citrix.png" },
+    {
+      name: "Citrix Virtual Apps and Desktops 7 Administration",
+      url: "/images/technical/citrix.png"
+    },
+    {
+      name:
+        "Moving to the Citrix Virtual Apps and Desktop Service on Citrix Cloud with Microsoft Azure",
+      url: "/images/technical/citrix.png"
+    },
+    {
+      name: "Manage Citrix Endpoint Management",
+      url: "/images/technical/citrix.png"
+    },
+    {
+      name: "Citrix Networking Assessment, Design, and Advanced Configuration ",
+      url: "/images/technical/citrix.png"
+    },
+    {
+      name:
+        "Moving to the Citrix Virtual Apps and Desktops Service on Citrix Cloud with Amazon Web Services",
+      url: "/images/technical/citrix.png"
+    },
+    {
+      name: "Deploy and Manage Citrix ADC 13.x with Citrix Gateway",
+      url: "/images/technical/citrix.png"
+    },
+    {
+      name:
+        "Citrix Virtual Apps and Desktops 7, App Layering, and WEM Administration (Fast-Track)",
+      url: "/images/technical/citrix.png"
+    },
+    { name: "Implement Citrix ADC 13.x", url: "/images/technical/citrix.png" },
+    {
+      name: "VMware vSphere: Install, Configure, Manage [V7]",
+      url: "/images/technical/vmware-workstation-logo.jpeg"
+    },
+    {
+      name: "VMware NSX-T Data Center: Install, Configure, Manage ",
+      url: "/images/technical/vmware-workstation-logo.jpeg"
+    },
+    {
+      name: "VMware Cloud on AWS: Deploy, Configure, Manage 2021",
+      url: "/images/technical/vmware-workstation-logo.jpeg"
+    },
+    //
+    {
+      name: "VMware NSX: Install, Configure, Manage [V6.4]",
+      url: "/images/technical/vmware-workstation-logo.jpeg"
+    },
+    {
+      name: "VMware vSphere: Design [V7]",
+      url: "/images/technical/vmware-workstation-logo.jpeg"
+    },
     { name: "Cisco", url: "/images/technical/cisco.png" },
-    { name: "CompTIA", url: "/images/technical/compTIA.png" },
-    { name: "IBM", url: "/images/technical/ibm.png" },
-    { name: "AWS", url: "/images/technical/aws.png" },
+    // ------------------------------------------------
+    { name: "CompTIA Network+", url: "/images/technical/compTIA.png" },
+    {
+      name: "CompTIA Security+ Training",
+      url: "/images/technical/compTIA.png"
+    },
+    { name: "CompTIA IT Fundamentals+", url: "/images/technical/compTIA.png" },
+    { name: "CompTIA CASP+ Training ", url: "/images/technical/compTIA.png" },
+    { name: "CompTIA CySA+ Training ", url: "/images/technical/compTIA.png" },
+    {
+      name: "CompTIA PenTest+ Training ",
+      url: "/images/technical/compTIA.png"
+    },
+    { name: "CompTIA Server+ Training", url: "/images/technical/compTIA.png" },
+    // { name: "CompTIA", url: "/images/technical/compTIA.png" },
+    // ------------------------------------------------
+    {
+      name: "IBM Cognos BI Administration (V10.2)",
+      url: "/images/technical/ibm.png"
+    },
+    { name: "IBM Tealeaf Implementation", url: "/images/technical/ibm.png" },
+    { name: "IBM I2 IBase Designer ", url: "/images/technical/ibm.png" },
+    { name: "IBM I2 IBase Essentials", url: "/images/technical/ibm.png" },
+    // ------------------------------------------------
+    {
+      name: "AWS Certified Cloud Practitioner",
+      url: "/images/technical/aws.png"
+    },
     { name: "CertNexus", url: "/images/technical/certnexus.png" },
     {
       name: "Programming and Development",
       url: "/images/technical/programming.png"
     },
-    { name: "Red Hat", url: "/images/technical/redhat.png" }
+    {
+      name: "Red Hat Certified System Administrator (RHCSA)",
+      url: "/images/technical/redhat.png"
+    },
+    {
+      name: "Red Hat Certified Engineer (RHCE)",
+      url: "/images/technical/redhat.png"
+    }
   ],
   analytic: [
     { name: "Power BI", url: "/images/analytic/power-bi.png" },
@@ -118,7 +225,7 @@ const courses = {
     { name: "Python", url: "/images/analytic/python.png" },
     { name: "SAP Business Object", url: "/images/analytic/sap.png" },
     { name: "Big Data Analytics", url: "/images/analytic/big-data.png" },
-    { name: "Advance Excel", url: "/images/analytic/excel.png" },
+
     { name: "R-Programming", url: "/images/analytic/R.png" }
   ]
 };
@@ -129,7 +236,8 @@ for (let i in courses) {
     parent = i;
     child.path = `courses/${parent}/${child.name}`;
     let name = child.name.toLowerCase().split(" ").join("-");
-    child.linkName = `courses/${parent}/${name}`;;
+    child.linkName = `courses/${parent}/${name}`;
+    // console.log(child.linkName)
   });
 }
 
@@ -152,7 +260,7 @@ listItems.forEach(item => {
   };
 });
 
-console.log(extractText);
+// console.log(extractText);
 
 menuIcon.addEventListener("click", () => {
   menu.classList.toggle("show");

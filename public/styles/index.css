@@ -799,6 +799,13 @@
   display: inline-block;
   border-radius: 50%;
   margin-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.enqCont .enquiries > div .contact .icon img {
+  width: 20px;
+  height: 20px;
 }
 .enqCont .enquiries > div .contact .social {
   display: flex;
@@ -1096,6 +1103,9 @@ footer ul li div {
 #courseView .text h2 {
   font-family: 'Montserrat';
   font-size: 1.7vw;
+}
+#courseView .text p {
+  line-height: 1.5;
 }
 #courseView .text li {
   padding: 5px;

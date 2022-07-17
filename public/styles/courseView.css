@@ -88,6 +88,9 @@
   font-family: 'Montserrat';
   font-size: 1.7vw;
 }
+#courseView .text p {
+  line-height: 1.5;
+}
 #courseView .text li {
   padding: 5px;
 }

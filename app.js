@@ -3,7 +3,6 @@ const path = require("path");
 const courses = require("./data/courses");
 const router = express.Router();
 
-
 const app = express();
 
 router.use(express.static("public"));
@@ -15,25 +14,38 @@ router.get("/", (req, res) => {
 
 router.get("/courses/:courseId/:courseName", (req, res) => {
   const { courseId, courseName } = req.params;
+
   const queryResult = { id: courseId, name: courseName };
 
-  const dataToRender = courses[queryResult.id].map((course, index) => {
-    if (course.linkName == courseName) {
-      return index;
+  console.log("----------------- GET DATA-----------------------");
+
+  let data = courses[courseId];
+  // console.log(data)
+  const [index] =   data.filter((x) => {
+    if (x.linkName == courseName){
+      return x
     }
-  });
-
-  let info = data => {
-    let result = "0";
-    data.forEach(i => {
-      if (i) {
-        result = i;
-      }
-    });
-    return courses[courseId][result];
+  })
+  if (index.contentAvailable) {
+    res.render("courseView", { data: index });
+  }else{
+    res.redirect("/")
   };
+});
 
-  let placeholders = {
+app.use(router);
+
+const port = process.env.PORT || 5500;
+
+app.listen(port, () => {
+  console.log(`Listening on port:${port}`);
+});
+
+module.exports = { app, router };
+
+/*
+{
+   let placeholders = {
     duration: "3 days",
     level: "Beginner",
     platform: "Instructor-led",
@@ -59,18 +71,5 @@ router.get("/courses/:courseId/:courseName", (req, res) => {
       "Module 9: Power BI mobile"
     ]
   };
-
-  res.render("courseView", { data: info(dataToRender), placeholders });
-});
-
-app.use(router)
-
-
-const port = process.env.PORT || 5500;
-
-app.listen(port, () => {
-  console.log(`Listening on port:${port}`);
-});
-
-
-module.exports = {app,router}
+}
+*/
