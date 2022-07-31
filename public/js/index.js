@@ -77,7 +77,8 @@ const courses = {
     { name: "IoT – Internet of Things", url: "/images/digital/iot.png" },
     { name: "Cybersecurity", url: "/images/digital/cybersecurity.png" },
     { name: "Big Data", url: "/images/digital/big-data.png" },
-    { name: "Cloud", url: "/images/digital/cloud.png" }
+    { name: "Cloud", url: "/images/digital/cloud.png" },
+    { name: "AGILE SOFTWARE DEVELOPMENT", url: "/images/agile.jpg" }
   ],
   product: [
     {
